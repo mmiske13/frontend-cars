@@ -1,0 +1,90 @@
+.content {
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto; }
+
+.car-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  margin: 10px; }
+  .car-container .cars-cell {
+    width: 100%;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    padding: 25px;
+    min-height: 200px; }
+  .car-container .cars-cell:first-child {
+    border-left: none !important;
+    padding-bottom: 25px !important; }
+  .car-container .cars-cell:nth-child(3n+1) {
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid black;
+    padding: 25px;
+    min-height: 250px; }
+  .car-container .cars-cell:nth-child(-n+3) {
+    width: 100%;
+    border-top: none;
+    padding-top: 0;
+    border-left: 2px solid black; }
+
+.car-card {
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  height: 100%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+  min-height: 250px; }
+  .car-card img {
+    width: 200px; }
+  .car-card .car-speed {
+    display: none; }
+  .car-card .car-desc {
+    display: none; }
+
+.car-card:hover {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  background-color: black;
+  cursor: pointer;
+  min-height: 250px;
+  text-align: left; }
+  .car-card:hover img {
+    display: none; }
+  .car-card:hover .car-name {
+    display: none; }
+  .car-card:hover .car-speed {
+    color: white;
+    display: block; }
+  .car-card:hover .car-desc {
+    color: white;
+    display: block; }
+
+.search-bar {
+  width: 100%;
+  text-align: center;
+  min-height: 50px;
+  background: gray;
+  margin-bottom: 50px;
+  padding: 15px; }
+  .search-bar input {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 25%;
+    padding: 5px; }
+  .search-bar .search-icon {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: black;
+    left: calc(60% + 3px);
+    top: calc(1% + 6px);
+    border-left: 2px solid black; }
